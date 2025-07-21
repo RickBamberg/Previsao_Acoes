@@ -1,0 +1,82 @@
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c2841;
+    color: #333;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+/* O "card" principal que contém tudo */
+.container {
+    background-color: white;
+    padding: 2rem, 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 35%
+}
+/* Título principal */
+h1 { 
+    color: #333; 
+    text-align: center; 
+}
+/* Estilos do formulário */
+form { 
+    display: flex; 
+    flex-direction: column; /* Coloca os campos um abaixo do outro */
+    gap: 1rem; /* Espaçamento entre os campos */
+}
+label { 
+    font-weight: bold; 
+    color: #555; 
+}
+input { 
+    padding: 0.75rem; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    font-size: 1rem; 
+}
+/* Estilo do botão */
+button { 
+    padding: 0.75rem; 
+    background-color: #007bff; /* Azul vibrante */
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 1rem; 
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.2s; /* Efeito suave ao passar o mouse */
+}
+button:hover { 
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+/* Bloco que exibe o resultado */
+.result { 
+    margin-top: 2rem; 
+    padding: 1.5rem; 
+    background-color: #e9ecef; /* Fundo cinza claro para o resultado */
+    border-left: 5px solid #007bff; /* Destaque azul na lateral */
+    border-radius: 4px; 
+}
+.result h2 { 
+    margin-top: 0; 
+    color: #333;
+}
+.result p { 
+    font-size: 1.25rem; 
+    color: #0056b3; 
+    font-weight: bold; 
+}
+/* Bloco de aviso */
+.warning { 
+    font-size: 0.9rem; 
+    color: #856404; /* Cor de texto para avisos */
+    background: #fff3cd; /* Fundo amarelo claro */
+    padding: 1rem; 
+    border-radius: 4px; 
+    text-align: center; 
+    margin-top: 1rem;
+}

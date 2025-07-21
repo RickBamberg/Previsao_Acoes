@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Previsor de Ações com Deep Learning</title>
+</head>
+<body class="body">
+    <div class="container index-container">
+        <h1>Previsor de Ações com LSTM</h1>
+        <form method="POST" action="/">
+             <div>
+                <label for="ticker">Ticker da Ação (comece a digitar o nome ou o ticker):</label>
+                <input type="text" id="ticker" name="ticker" value="{{ form_data.ticker }}" list="lista-empresas" required>
+                <datalist id="lista-empresas">
+                    {% for empresa in empresas %}
+                        <option value="{{ empresa.ticker }}">{{ empresa.nome }}</option>
+                    {% endfor %}
+                </datalist>
+            </div>
+            <div>
+                <label for="end_date">Treinar até a data:</label>
+                <input type="date" id="end_date" name="end_date" value="{{ form_data.end_date }}" required>
+            </div>
+            <button type="submit">Prever Preço do Próximo Dia</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h2>Resultado da Previsão</h2>
+                <p>Previsão de Preço Ajustado para: </p>
+                <p>{{ prediction }}</p>
+            </div>
+            <div class="warning">
+                <strong>Atenção:</strong> O treinamento do modelo é refeito a cada requisição, o que pode levar alguns minutos. A previsão é para o preço de fechamento **ajustado**.
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
