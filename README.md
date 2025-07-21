@@ -80,20 +80,20 @@ http://localhost:5000
 
 ### 🗂 Estrutura de Pastas
 
-Previsao_Acoes/
-├── app.py
-├── data/
-│   └── Tickers_B3.csv
-├── models/
-│   ├── petr4.sa_model.keras
-│   └── petr4.sa_scaler.pkl
-├── notebook/
-│   └── Previsao_Acoes.ipynb
-├── static/
-│   └── css/
-│       └── style.css
-├── templates/
-│   └── index.html
-├── venv/
-└── requirements.txt
+Previsao_Acoes/  
+├── app.py  
+├── data/  
+│   └── Tickers_B3.csv  
+├── models/  
+│   ├── petr4.sa_model.keras  
+│   └── petr4.sa_scaler.pkl  
+├── notebook/  
+│   └── Previsao_Acoes.ipynb  
+├── static/  
+│   └── css/  
+│       └── style.css  
+├── templates/  
+│   └── index.html  
+├── venv/  
+└── requirements.txt  
 
